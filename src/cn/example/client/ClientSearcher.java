@@ -3,9 +3,8 @@ package cn.example.client;
 import cn.example.client.bean.ServerInfo;
 import cn.example.clink.utils.ByteUtils;
 import cn.example.constants.UDPConstants;
-import sun.java2d.SurfaceDataProxy;
 
-import javax.management.ListenerNotFoundException;
+
 import java.io.IOException;
 import java.net.*;
 import java.nio.ByteBuffer;
@@ -144,9 +143,8 @@ public class ClientSearcher {
                     receiveDownLatch.countDown();
                 }
             }catch (Exception ignored) {
-
             }finally {
-                ds.close();
+                close();
             }
 
             System.out.println("UDPSearcher listener finished.");
