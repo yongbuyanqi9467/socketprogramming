@@ -1,4 +1,4 @@
-package cn.example.udp;
+package cn.example.udp.bio;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
