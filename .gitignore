@@ -1,0 +1,9 @@
+.DS_Store
+target/
+*/logs
+.idea
+dist/
+node_modules/
+*.iml
+*.log
+lib/
