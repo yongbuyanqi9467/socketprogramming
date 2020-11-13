@@ -10,7 +10,7 @@ import java.net.DatagramSocket;
 import java.nio.ByteBuffer;
 import java.util.UUID;
 
-public class ServerProvider {
+public class UDPProvider {
 
     private static Provider PROVIDER_INSTANCE;
 
@@ -66,7 +66,7 @@ public class ServerProvider {
                     boolean isValid = clientDataLen >= (UDPConstants.HEADER.length + 2 + 4)
                             && ByteUtils.startsWith(clientData,UDPConstants.HEADER);
 
-                    System.out.println("ServerProvider receive from ip:" + clientIp + "\tport:" + clientPort + "\tdataValid:" + isValid);
+                    System.out.println("UDPProvider receive from ip:" + clientIp + "\tport:" + clientPort + "\tdataValid:" + isValid);
 
                     if(!isValid) {
                         //无效继续
@@ -95,9 +95,9 @@ public class ServerProvider {
                                 len,receivePack.getAddress(),responsePort);
 
                         ds.send(responsePacket);
-                        System.out.println("ServerProvider response to:" + clientIp + "\tport:" + responsePort + "\tdataLen:" + len);
+                        System.out.println("UDPProvider response to:" + clientIp + "\tport:" + responsePort + "\tdataLen:" + len);
                     }else {
-                        System.out.println("ServerProvider receive cmd nonsupport; cmd:" + cmd + "\tport:" + port);
+                        System.out.println("UDPProvider receive cmd nonsupport; cmd:" + cmd + "\tport:" + port);
                     }
                 }
             }catch (Exception ignored) {

@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-public class ClientSearcher {
+public class UDPSearcher {
 
     private static final int LISTEN_PORT = UDPConstants.PORT_CLIENT_RESPONSE;
 
